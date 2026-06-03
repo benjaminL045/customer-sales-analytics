@@ -93,11 +93,3 @@ All datasets were successfully imported into PostgreSQL and are ready for:
 - Business intelligence dashboarding
 - Advanced analytics (window functions, joins, etc.)
 
----
-
-## Next Step
-Proceed to SQL analysis phase:
-- Revenue analysis
-- Customer segmentation
-- Product performance
-- Delivery vs review analysis
