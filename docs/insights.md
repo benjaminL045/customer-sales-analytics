@@ -2,84 +2,93 @@
 
 ## 🧭 Overview
 
-This analysis explores an e-commerce dataset to understand:
+This analysis explores an e-commerce marketplace dataset to understand:
 
-- Revenue trends over time  
-- Product category performance  
-- Customer purchasing behaviour  
-- Revenue concentration across customers  
-- Data quality and structural integrity  
+* Revenue growth patterns over time
+* Product category performance and concentration
+* Customer purchasing behaviour and segmentation
+* Revenue concentration across the customer base
+* Operational and data quality signals
 
-The dataset represents **order-level transactions with multiple line items per order**, typical of a marketplace-style e-commerce platform.
+The dataset represents **order-level transactions in a multi-line-item marketplace structure**, where a single order may contain multiple products.
 
 ---
 
 ## 📈 1. Business Growth & Revenue Trends
 
-The platform demonstrates a clear **growth trajectory over time**, particularly from late 2016 into 2017.
+The platform shows a clear and sustained **growth trajectory from late 2016 through 2017**.
 
 ### Key observations:
 
-- Early stage (2016):  
-  - Low and inconsistent revenue  
-  - Limited category activity  
+* **Early stage (2016):**
 
-- Growth phase (2017 onward):  
-  - Rapid increase in transaction volume  
-  - Strong and sustained revenue expansion  
+  * Low and inconsistent monthly revenue (sub–$10K range in early months)
+  * Limited category participation
+  * Sparse transaction volume
+
+* **Growth phase (2017):**
+
+  * Strong acceleration in monthly revenue (reaching **$30K–$80K+ per month in peak categories**)
+  * Significant increase in order volume
+  * Broader category participation across the platform
 
 ### Insight:
 
-The business is in a **high-growth expansion phase**, with increasing customer adoption and transaction frequency over time.
+The business is in a **rapid expansion phase**, driven primarily by customer acquisition and increasing transaction frequency rather than mature retention.
 
 ---
 
 ## 🛒 2. Product Category Performance
 
-Revenue is unevenly distributed across product categories, with a small number of categories consistently dominating performance.
+Revenue is **highly concentrated across a small set of categories**.
 
 ### Top-performing categories:
 
-- 🏠 Home & furniture (e.g. decor and furnishings)  
-- 💄 Beauty & health products  
-- ⚽ Sports & leisure  
-- 💻 Electronics & accessories  
-- 🎁 Watches & gifts  
+* 🏠 Home & Furniture (decor, furnishings, living essentials)
+* 💄 Beauty & Health
+* ⚽ Sports & Leisure
+* 💻 Electronics & Accessories
+* 🎁 Watches & Gifts
+
+These categories consistently rank among the **highest revenue contributors across multiple months in 2017**, often generating **$20K–$80K+ monthly revenue during peak periods**.
 
 ### Key patterns:
 
-- A **small set of categories drives the majority of revenue**
-- Performance is relatively stable across time for top categories
-- Long-tail categories contribute marginal revenue
+* Top categories dominate total revenue contribution
+* Strong stability among leading categories over time
+* Long-tail categories contribute marginal and inconsistent revenue
 
 ### Insight:
 
-The platform exhibits a **concentrated category structure**, where growth depends heavily on a few core product segments.
+The platform exhibits a **strong category concentration risk**, where a small number of categories drive most revenue.
 
 ---
 
 ## 📊 3. Category Seasonality & Volatility
 
-Not all categories behave consistently.
+Category performance varies significantly over time.
 
-### Observed behaviour:
+### Stable categories:
 
-- Stable categories:
-  - Beauty & health
-  - Home goods
-  - Electronics
+* Beauty & Health
+* Home & Furniture
+* Electronics
 
-- Volatile categories:
-  - Fashion-related segments
-  - Media (DVDs, music)
-  - Food products
+### Volatile categories:
+
+* Fashion-related segments
+* Media (DVDs, music)
+* Food-related products
 
 ### Insight:
 
-Volatile categories are likely influenced by:
-- promotions  
-- seasonal demand  
-- low-frequency purchasing behaviour  
+Volatility is driven by:
+
+* Promotional cycles
+* Seasonal demand fluctuations
+* Low-frequency purchasing behaviour
+
+Stable categories act as **core revenue anchors**, while volatile categories behave as **campaign-driven revenue streams**.
 
 ---
 
@@ -87,29 +96,25 @@ Volatile categories are likely influenced by:
 
 ### 4.1 Repeat Purchasing Behaviour
 
-Customer behaviour shows **very limited repeat purchase activity**.
+Customer retention is limited.
+
+* Most customers make **only one purchase**
+* Repeat customers form a small minority
 
 ### Insight:
 
-- Most customers appear to make **one-time purchases**
-- Weak evidence of strong retention loops
-- Growth is primarily driven by **new customer acquisition**
-
-### Business implication:
-
-The platform behaves like an **acquisition-driven marketplace rather than a retention-driven subscription model**.
+The platform is **acquisition-driven**, with weak evidence of strong customer lifecycle retention.
 
 ---
 
 ### 4.2 Order Structure & Basket Size
 
-Each order contains a small number of items.
+* Average basket size: **~1 item per order**
+* Cross-item purchasing is rare
 
 ### Insight:
 
-- Average basket size is approximately **1 item per order**
-- Purchasing behaviour is **simple and transactional**
-- Cross-selling opportunities may be underutilised
+Purchases are **highly transactional and single-intent driven**, with limited bundling behaviour.
 
 ---
 
@@ -117,143 +122,142 @@ Each order contains a small number of items.
 
 ### 5.1 Top Customer Impact
 
-A small number of customers contribute disproportionately high revenue.
-
-- Top customer spends significantly more than average users
-- Revenue drops sharply after the top few customers
+* Highest-value customer contributes **$13,000+ lifetime revenue**
+* Top customers significantly exceed median customer value
 
 ### Insight:
 
-Customer value distribution is highly uneven.
+A small group of customers contributes disproportionately high revenue.
 
 ---
 
-### 5.2 Revenue Distribution Across Customer Segments
+### 5.2 Revenue Distribution (Deciles)
 
-Customers grouped into deciles show a strong imbalance in revenue contribution:
-
-- Top 10% customers generate the largest share of revenue  
-- Bottom 50% contribute a relatively small portion  
+* Top 10% of customers generate the majority of total revenue
+* Bottom 50% contribute only a small fraction individually
 
 ### Insight:
 
-The dataset exhibits a strong **Pareto distribution (80/20 effect)**:
-- A small group of customers drives most revenue
-- The majority of customers contribute low individual value
+The dataset follows a strong **Pareto (80/20) distribution**, where revenue is heavily concentrated in a small customer segment.
 
 ---
 
-### 5.3 Customer Segmentation View
-
-Customers can be grouped into three tiers:
+### 5.3 Customer Segmentation
 
 #### 🟣 VIP Customers (Top 10%)
-- High lifetime value  
-- Critical to revenue stability  
-- Require retention-focused strategies  
 
-#### 🟡 Mid-tier Customers (10–50%)
-- Significant growth opportunity  
-- Best segment for upselling and engagement  
+* High lifetime value
+* Critical to revenue stability
+* Require retention strategies
+
+#### 🟡 Growth Customers (10–50%)
+
+* Moderate value
+* Strong upsell potential
 
 #### 🔵 Low-value Customers (Bottom 50%)
-- High volume, low revenue contribution  
-- Primarily acquisition-driven segment  
+
+* High volume, low contribution
+* Acquisition-driven segment
 
 ---
 
 ## 📦 6. Data Structure & Quality Insights
 
-### Order structure validation:
+* Dataset reflects a **multi-line-item order structure**
+* Aggregations at order level are valid
 
-- Dataset is correctly structured at **order line-item level**
-- Multiple products per order are expected and valid
+### Key observations:
 
-### Key observation:
-
-- Average items per order is low (~1.1–1.2 items per order)
-- Most purchases are single-item transactions
+* Average items per order: **~1.1–1.2**
+* Most purchases are single-item transactions
 
 ### Data quality notes:
 
-- Some missing or NULL product category values exist  
-- These should be addressed for accurate category-level reporting  
+* Some missing product category values exist
+* Minor classification inconsistencies affect category-level precision
+
+### Insight:
+
+Data is structurally strong but requires light cleaning for perfect analytical accuracy.
 
 ---
 
 ## 📌 7. Key Business Insights
 
-### 🔥 1. Strong revenue concentration
-A small percentage of customers generate a disproportionate share of revenue.
+### 🔥 Revenue concentration
+
+Top 10% of customers drive a disproportionate share of total revenue.
 
 ---
 
-### 📉 2. Weak customer retention
-Most customers do not appear to make repeat purchases.
+### 📉 Weak retention
+
+Most customers do not return after their first purchase.
 
 ---
 
-### 🛒 3. Simple purchasing behaviour
-Orders are generally small and single-item based.
+### 🛒 Simple purchasing behaviour
+
+Orders are small and typically single-item based.
 
 ---
 
-### 📦 4. Category dependence
-Revenue is heavily reliant on a small number of product categories.
+### 📦 Category dependency
+
+Revenue relies heavily on a small number of core categories.
 
 ---
 
-### 📈 5. High-growth trajectory
-The platform shows strong expansion over time, especially into 2017.
+### 📈 Strong growth trajectory
+
+The platform demonstrates strong expansion, particularly through 2017.
 
 ---
 
 ## 🚀 8. Strategic Recommendations
 
 ### 1. Improve customer retention
-- Loyalty programs  
-- Re-engagement campaigns  
-- Personalised offers  
 
----
+* Loyalty programs
+* Re-engagement campaigns
+* Personalised recommendations
 
 ### 2. Increase basket size
-- Product bundling  
-- Cross-sell recommendations  
-- Free-shipping thresholds  
 
----
+* Bundling strategies
+* Cross-sell recommendations
+* Incentivised multi-item discounts
 
 ### 3. Leverage high-value customers
-- VIP segmentation  
-- Exclusive promotions  
-- Priority support or perks  
 
----
+* VIP segmentation
+* Exclusive offers
+* Retention-focused engagement
 
 ### 4. Strengthen core categories
-- Focus marketing spend on top-performing categories  
-- Expand product depth in high-demand segments  
 
----
+* Prioritise marketing spend on top categories
+* Expand inventory depth in high-demand segments
 
 ### 5. Improve data quality
-- Resolve missing category mappings  
-- Improve product classification consistency  
+
+* Resolve missing category mappings
+* Standardise product classification
 
 ---
 
 ## 🧾 9. Final Summary
 
-This analysis reveals a **fast-growing but highly concentrated e-commerce platform**.
+This analysis reveals a **fast-growing but structurally concentrated e-commerce platform**.
 
 ### Core characteristics:
 
-- Revenue is heavily skewed toward top customers  
-- Customer retention is weak  
-- Orders are typically small and simple  
-- A few categories dominate total revenue  
+* Revenue is highly concentrated in a small set of customers and categories
+* Customer retention is weak
+* Orders are typically small and single-item based
+* Growth is strong but acquisition-driven
 
-### Overall conclusion:
+### Final conclusion:
 
-> While the platform demonstrates strong growth, long-term sustainability depends on improving retention, increasing basket size, and reducing reliance on a small group of high-value customers and categories.
+> The platform demonstrates strong growth momentum, but long-term sustainability depends on improving retention, increasing basket size, and reducing dependency on a small number of high-value customers and categories.
