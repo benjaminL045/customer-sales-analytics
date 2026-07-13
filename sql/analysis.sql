@@ -81,7 +81,7 @@ LIMIT 10;
 
 
 -- =========================================================
--- 6. CUSTOMER SEGMENTATION (SIMPLE RFM STYLE)
+-- 6. CUSTOMER SEGMENTATION
 -- =========================================================
 
 WITH customer_metrics AS (
