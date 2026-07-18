@@ -4,260 +4,394 @@
 
 This analysis explores an e-commerce marketplace dataset to understand:
 
-* Revenue growth patterns over time
-* Product category performance and concentration
-* Customer purchasing behaviour and segmentation
-* Revenue concentration across the customer base
-* Operational and data quality signals
+- Revenue growth patterns over time
+- Product category performance
+- Customer purchasing behaviour
+- Customer value concentration
+- Seller performance
+- Delivery performance
+- Customer satisfaction signals
+- Data quality and structural integrity
 
-The dataset represents **order-level transactions in a multi-line-item marketplace structure**, where a single order may contain multiple products.
+The dataset represents **order-level marketplace transactions**, where individual orders may contain multiple product line items.
 
 ---
 
-## 📈 1. Business Growth & Revenue Trends
+# 📈 1. Business Growth & Revenue Trends
 
-The platform shows a clear and sustained **growth trajectory from late 2016 through 2017**.
+## Key Metrics
+
+| Metric | Value |
+|---|---:|
+| Total Revenue | $15,419,773.75 |
+| Total Orders | 96,478 |
+| Average Order Value | $159.83 |
+
+---
+
+## Revenue Growth Over Time
+
+The platform demonstrates strong growth from late 2016 through 2018.
 
 ### Key observations:
 
-* **Early stage (2016):**
+- Early stage (2016):
+  - Limited transaction volume
+  - Revenue remained below $50K monthly
 
-  * Low and inconsistent monthly revenue (sub–$10K range in early months)
-  * Limited category participation
-  * Sparse transaction volume
+- Growth phase (2017):
+  - Monthly revenue increased consistently
+  - Order volume expanded significantly
+  - November 2017 became a major growth period with approximately **$1.15M revenue**
 
-* **Growth phase (2017):**
-
-  * Strong acceleration in monthly revenue (reaching **$30K–$80K+ per month in peak categories**)
-  * Significant increase in order volume
-  * Broader category participation across the platform
-
-### Insight:
-
-The business is in a **rapid expansion phase**, driven primarily by customer acquisition and increasing transaction frequency rather than mature retention.
-
----
-
-## 🛒 2. Product Category Performance
-
-Revenue is **highly concentrated across a small set of categories**.
-
-### Top-performing categories:
-
-* 🏠 Home & Furniture (decor, furnishings, living essentials)
-* 💄 Beauty & Health
-* ⚽ Sports & Leisure
-* 💻 Electronics & Accessories
-* 🎁 Watches & Gifts
-
-These categories consistently rank among the **highest revenue contributors across multiple months in 2017**, often generating **$20K–$80K+ monthly revenue during peak periods**.
-
-### Key patterns:
-
-* Top categories dominate total revenue contribution
-* Strong stability among leading categories over time
-* Long-tail categories contribute marginal and inconsistent revenue
+- Mature growth phase (2018):
+  - Monthly revenue consistently exceeded **$900K**
+  - Revenue stabilised around **$1M+ per month**
 
 ### Insight:
 
-The platform exhibits a **strong category concentration risk**, where a small number of categories drive most revenue.
+The platform experienced rapid marketplace adoption, with growth driven by increasing order volume and customer acquisition.
 
 ---
 
-## 📊 3. Category Seasonality & Volatility
+# 🛒 2. Product Category Performance
 
-Category performance varies significantly over time.
+Revenue is concentrated among a small number of product categories.
 
-### Stable categories:
+## Top Revenue Categories
 
-* Beauty & Health
-* Home & Furniture
-* Electronics
+| Category | Revenue |
+|---|---:|
+| Beauty & Health | $1,412,089.53 |
+| Watches & Gifts | $1,264,333.12 |
+| Bed, Bath & Table | $1,225,209.26 |
+| Sports & Leisure | $1,118,256.91 |
+| Computers & Accessories | $1,032,723.77 |
+| Furniture & Decoration | $880,329.92 |
+| Household Utilities | $758,392.25 |
+| Cool Stuff | $691,680.89 |
+| Automotive | $669,454.75 |
+| Garden Tools | $567,145.68 |
 
-### Volatile categories:
+---
 
-* Fashion-related segments
-* Media (DVDs, music)
-* Food-related products
+## Key patterns:
+
+- Beauty & Health generated the highest category revenue (**$1.41M**)
+- The top 5 categories each generated over **$1M**
+- Lower-performing categories contributed significantly less revenue
 
 ### Insight:
 
-Volatility is driven by:
-
-* Promotional cycles
-* Seasonal demand fluctuations
-* Low-frequency purchasing behaviour
-
-Stable categories act as **core revenue anchors**, while volatile categories behave as **campaign-driven revenue streams**.
+Revenue depends heavily on a small group of successful categories, creating category concentration risk.
 
 ---
 
-## 👥 4. Customer Behaviour Analysis
+# 📊 3. Category Performance Over Time
 
-### 4.1 Repeat Purchasing Behaviour
+Category trends show that leading categories maintain consistent contribution throughout the dataset.
 
-Customer retention is limited.
+### Strong-performing categories:
 
-* Most customers make **only one purchase**
-* Repeat customers form a small minority
+- Beauty & Health
+- Watches & Gifts
+- Bed, Bath & Table
+- Sports & Leisure
+- Computers & Accessories
 
 ### Insight:
 
-The platform is **acquisition-driven**, with weak evidence of strong customer lifecycle retention.
+Core categories provide stable revenue foundations, while smaller categories contribute less predictable sales volume.
 
 ---
 
-### 4.2 Order Structure & Basket Size
+# 👥 4. Customer Behaviour Analysis
 
-* Average basket size: **~1 item per order**
-* Cross-item purchasing is rare
+## 4.1 Repeat Customer Analysis
+
+Repeat customer analysis identified:
+
+```
+Repeat customers: 0
+```
 
 ### Insight:
 
-Purchases are **highly transactional and single-intent driven**, with limited bundling behaviour.
+The dataset shows extremely limited repeat purchasing behaviour.
+
+Most customers appear to make only one transaction.
+
+### Business implication:
+
+The marketplace is primarily acquisition-driven rather than retention-driven.
+
+Potential improvements:
+
+- Loyalty programs
+- Customer re-engagement campaigns
+- Personalised recommendations
 
 ---
 
-## 💰 5. Revenue Concentration & Customer Value
+# 🛒 4.2 Basket Size Analysis
 
-### 5.1 Top Customer Impact
+Average order value:
 
-* Highest-value customer contributes **$13,000+ lifetime revenue**
-* Top customers significantly exceed median customer value
+```
+$159.83
+```
+
+Average items per order:
+
+```
+~1.1 items
+```
 
 ### Insight:
 
-A small group of customers contributes disproportionately high revenue.
+Customer purchases are mainly single-item transactions.
+
+Potential opportunity:
+
+- Product bundles
+- Cross-selling recommendations
+- Multi-item discounts
 
 ---
 
-### 5.2 Revenue Distribution (Deciles)
+# 💰 5. Customer Revenue Concentration
 
-* Top 10% of customers generate the majority of total revenue
-* Bottom 50% contribute only a small fraction individually
+## 5.1 Highest Value Customers
+
+Top customer lifetime values:
+
+| Rank | Lifetime Revenue |
+|---|---:|
+| 1 | $13,664.08 |
+| 2 | $7,274.88 |
+| 3 | $6,929.31 |
+| 4 | $6,922.21 |
+| 5 | $6,726.66 |
+
+---
+
+## Insight:
+
+The highest-value customers contribute significantly more revenue than typical customers.
+
+Revenue distribution is highly uneven.
+
+---
+
+# 📊 5.2 Customer Revenue Deciles
+
+Customer revenue distribution:
+
+| Customer Segment | Revenue |
+|---|---:|
+| Bottom 10% | $302,116.07 |
+| 20% | $453,042.32 |
+| 30% | $595,045.17 |
+| 40% | $737,609.27 |
+| 50% | $921,867.18 |
+| 60% | $1,115,017.82 |
+| 70% | $1,377,411.57 |
+| 80% | $1,716,313.07 |
+| 90% | $2,334,040.63 |
+| Top 10% | $5,867,310.65 |
+
+---
 
 ### Insight:
 
-The dataset follows a strong **Pareto (80/20) distribution**, where revenue is heavily concentrated in a small customer segment.
+The top 10% of customers generate approximately **38% of total revenue**.
+
+This indicates strong customer value concentration.
 
 ---
 
-### 5.3 Customer Segmentation
+# 🚚 6. Delivery Performance
 
-#### 🟣 VIP Customers (Top 10%)
+Average delivery time:
 
-* High lifetime value
-* Critical to revenue stability
-* Require retention strategies
-
-#### 🟡 Growth Customers (10–50%)
-
-* Moderate value
-* Strong upsell potential
-
-#### 🔵 Low-value Customers (Bottom 50%)
-
-* High volume, low contribution
-* Acquisition-driven segment
-
----
-
-## 📦 6. Data Structure & Quality Insights
-
-* Dataset reflects a **multi-line-item order structure**
-* Aggregations at order level are valid
-
-### Key observations:
-
-* Average items per order: **~1.1–1.2**
-* Most purchases are single-item transactions
-
-### Data quality notes:
-
-* Some missing product category values exist
-* Minor classification inconsistencies affect category-level precision
+```
+12.0 days
+```
 
 ### Insight:
 
-Data is structurally strong but requires light cleaning for perfect analytical accuracy.
+The platform provides a baseline delivery experience of approximately 12 days.
+
+Potential improvements:
+
+- Faster logistics processing
+- Seller performance monitoring
+- Delivery prediction models
 
 ---
 
-## 📌 7. Key Business Insights
+# 🏪 7. Seller Performance
 
-### 🔥 Revenue concentration
+## Top Sellers by Revenue
 
-Top 10% of customers drive a disproportionate share of total revenue.
-
----
-
-### 📉 Weak retention
-
-Most customers do not return after their first purchase.
-
----
-
-### 🛒 Simple purchasing behaviour
-
-Orders are small and typically single-item based.
+| Seller | Revenue |
+|---|---:|
+| Seller 1 | $247,007.06 |
+| Seller 2 | $237,806.69 |
+| Seller 3 | $231,220.43 |
+| Seller 4 | $230,797.02 |
+| Seller 5 | $200,833.50 |
 
 ---
 
-### 📦 Category dependency
+### Insight:
 
-Revenue relies heavily on a small number of core categories.
+Seller revenue contribution is uneven, with several high-performing sellers generating significantly more revenue.
 
----
+Marketplace strategy should focus on:
 
-### 📈 Strong growth trajectory
-
-The platform demonstrates strong expansion, particularly through 2017.
-
----
-
-## 🚀 8. Strategic Recommendations
-
-### 1. Improve customer retention
-
-* Loyalty programs
-* Re-engagement campaigns
-* Personalised recommendations
-
-### 2. Increase basket size
-
-* Bundling strategies
-* Cross-sell recommendations
-* Incentivised multi-item discounts
-
-### 3. Leverage high-value customers
-
-* VIP segmentation
-* Exclusive offers
-* Retention-focused engagement
-
-### 4. Strengthen core categories
-
-* Prioritise marketing spend on top categories
-* Expand inventory depth in high-demand segments
-
-### 5. Improve data quality
-
-* Resolve missing category mappings
-* Standardise product classification
+- Supporting top sellers
+- Maintaining seller quality
+- Improving underperforming seller performance
 
 ---
 
-## 🧾 9. Final Summary
+# ⭐ 8. Customer Review Analysis
 
-This analysis reveals a **fast-growing but structurally concentrated e-commerce platform**.
+Review scores show differences in customer behaviour.
 
-### Core characteristics:
+Analysis examined:
 
-* Revenue is highly concentrated in a small set of customers and categories
-* Customer retention is weak
-* Orders are typically small and single-item based
-* Growth is strong but acquisition-driven
+- Number of orders
+- Revenue contribution
+- Average order value by review score
 
-### Final conclusion:
+### Insight:
 
-> The platform demonstrates strong growth momentum, but long-term sustainability depends on improving retention, increasing basket size, and reducing dependency on a small number of high-value customers and categories.
+Customer satisfaction can influence repeat purchasing and marketplace reputation.
+
+Improving:
+
+- Delivery speed
+- Product quality
+- Seller reliability
+
+can improve customer experience.
+
+---
+
+# 📦 9. Data Quality Insights
+
+## Dataset Validation
+
+| Check | Result |
+|---|---:|
+| Fact Sales Rows | 110,197 |
+| Unique Orders | 96,478 |
+| Duplicate Rows | 0 |
+
+---
+
+## Missing Values
+
+Missing data identified:
+
+- Delivery dates: 8 records
+- Product categories: 1,537 records
+- Review scores: 827 records
+
+### Insight:
+
+The dataset is structurally reliable, but missing category and review information should be handled for more accurate reporting.
+
+---
+
+# 📌 10. Key Business Insights
+
+## 🔥 1. Strong marketplace growth
+
+Revenue increased significantly from 2016 to 2018.
+
+---
+
+## 💰 2. Revenue concentration
+
+Top customers contribute a disproportionate share of revenue.
+
+---
+
+## 🛒 3. Low repeat purchasing
+
+Customer retention is the biggest growth opportunity.
+
+---
+
+## 📦 4. Category dependency
+
+A small number of categories generate most revenue.
+
+---
+
+## 🚚 5. Operational improvement opportunities
+
+Delivery speed and seller performance represent opportunities for improving customer experience.
+
+---
+
+# 🚀 11. Strategic Recommendations
+
+## 1. Improve customer retention
+
+- Loyalty programs
+- Personalised marketing
+- Customer lifecycle campaigns
+
+---
+
+## 2. Increase basket size
+
+- Product recommendations
+- Bundling strategies
+- Discounts for multiple purchases
+
+---
+
+## 3. Protect high-value customers
+
+- VIP customer segmentation
+- Exclusive promotions
+- Targeted retention campaigns
+
+---
+
+## 4. Strengthen profitable categories
+
+- Expand high-performing categories
+- Optimise marketing investment
+
+---
+
+## 5. Improve marketplace operations
+
+- Reduce delivery times
+- Monitor seller performance
+- Improve product classification quality
+
+---
+
+# 🧾 Final Summary
+
+The analysis shows a **rapidly growing but highly concentrated e-commerce marketplace**.
+
+Main characteristics:
+
+- $15.4M total revenue generated
+- Strong growth from 2016–2018
+- Revenue concentrated among top customers and categories
+- Very limited repeat purchasing behaviour
+- Small average basket size
+- Operational improvement opportunities
+
+## Final conclusion:
+
+> The platform has strong growth potential, but long-term sustainability depends on improving customer retention, increasing basket size, strengthening operational performance, and reducing dependence on a small number of revenue drivers.
